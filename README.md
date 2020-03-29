@@ -1,2 +1,4 @@
-# teamspeak3-bot
-Teamspeak 3 Bot
+# Teamspeak 3 BOT
+
+##### Features
+	- AFK Mover
