@@ -31,7 +31,7 @@ function start() {
 	ts3.on("ready", async () => {
 		Promise.all([
 			ts3.registerEvent("server"),
-			ts3.registerEvent("channel", 0),
+			ts3.registerEvent("channel", 1),
 			ts3.registerEvent("textserver"),
 			ts3.registerEvent("textchannel"),
 			ts3.registerEvent("textprivate")
@@ -47,7 +47,7 @@ function start() {
 			process.exit(1);
 		});
 	});
-
+	
 	// Check every second if any client is muted or unmuted
 	setInterval(async () => {
 
@@ -61,7 +61,6 @@ function start() {
 				// Move client to AFK CHANNEL
 				if(ARRAY_OF_CLIENTS[ts3_client.databaseId] !== undefined) {
 					ts3_client.move(AFK_CHANNEL);
-					ts3_client.message("\nFoste movido para o AFK! \nPara voltar para o channel anterior dá unmute \nBy: Sekoia Lindo <3");
 				}
 			}
 	
